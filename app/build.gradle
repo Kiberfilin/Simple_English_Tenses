@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply from: "$project.rootDir/scripts/deps_versions.gradle"
+
+android {
+    compileSdkVersion "$sdkVersions.compileSdk".toInteger()
+    buildToolsVersion "$sdkVersions.buildTools"
+
+    defaultConfig {
+        applicationId "ru.cyber_eagle_owl.simpleenglish"
+        minSdkVersion "$sdkVersions.minSdk"
+        targetSdkVersion "$sdkVersions.targetSdk"
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation appcompat
+    androidTestImplementation androidxJunit
+    androidTestImplementation androidxEspressoCore
+    testImplementation junit
+    implementation constraintlayout
+    implementation ktxcore
+    implementation dagger
+    kapt daggerCompiler
+    implementation timber
+
+    implementation project(':sources:commons:ui_core')
+    implementation project(':sources:base:core')
+}

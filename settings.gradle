@@ -1,0 +1,7 @@
+include ':sources:base:core'
+include ':sources:base:core_api'
+include ':sources:base:viper_core'
+include ':sources:commons:ui_core'
+include ':sources:base:core_impl'
+include ':app'
+rootProject.name = "Simple English"

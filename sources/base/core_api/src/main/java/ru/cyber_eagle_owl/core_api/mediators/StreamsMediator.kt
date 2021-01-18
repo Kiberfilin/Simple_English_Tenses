@@ -1,0 +1,7 @@
+package ru.cyber_eagle_owl.core_api.mediators
+
+import android.content.Context
+
+interface StreamsMediator {
+    fun openStreamsActivity(context: Context)
+}
