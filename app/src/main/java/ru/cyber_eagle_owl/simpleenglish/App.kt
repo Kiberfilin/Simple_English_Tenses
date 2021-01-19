@@ -26,6 +26,7 @@ class App : Application(), AppWithFacade {
     }
 
     private fun prepareTimber() {
+        
         Timber.plant(Timber.DebugTree())
     }
 }

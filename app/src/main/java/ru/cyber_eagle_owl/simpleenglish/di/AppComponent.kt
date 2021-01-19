@@ -5,6 +5,7 @@ import android.content.Context
 import dagger.BindsInstance
 import dagger.Component
 import ru.cyber_eagle_owl.core_api.di.ApplicationScope
+import ru.cyber_eagle_owl.core_api.providers.AppProvider
 
 @ApplicationScope
 @Component

@@ -10,7 +10,7 @@ import ru.cyber_eagle_owl.core_impl.utils.ResourcesHelperImpl
 import ru.cyber_eagle_owl.core_impl.utils.SharedPreferencesHelperImpl
 import timber.log.Timber
 
-private const val SADDAY_APP_SHAREDPREF_NAME = "SADDAY APP"
+private const val SADDAY_APP_SHAREDPREF_NAME = "SIMPLE_ENGLISH_TENSES_APP"
 
 @Module
 class UtilsModule {

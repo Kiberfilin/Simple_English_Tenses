@@ -1,3 +1,4 @@
+include 'sources:features:main_activity_module'
 include ':sources:base:core'
 include ':sources:base:core_api'
 include ':sources:base:viper_core'

@@ -2,7 +2,12 @@ package ru.cyber_eagle_owl.simpleenglish.di
 
 import android.app.Application
 import dagger.Component
+import ru.cyber_eagle_owl.core.CoreProvidersFactory
 import ru.cyber_eagle_owl.core_api.di.ApplicationScope
+import ru.cyber_eagle_owl.core_api.providers.AppProvider
+import ru.cyber_eagle_owl.core_api.providers.ProvidersFacade
+import ru.cyber_eagle_owl.core_api.providers.UseCasesProvider
+import ru.cyber_eagle_owl.core_api.providers.UtilsProvidersFacade
 import ru.cyber_eagle_owl.simpleenglish.App
 
 @ApplicationScope

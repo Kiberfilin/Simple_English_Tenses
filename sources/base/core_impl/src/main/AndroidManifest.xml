@@ -2,5 +2,4 @@
     package="ru.cyber_eagle_owl.core_impl">
 
     /
-    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

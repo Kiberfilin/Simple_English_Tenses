@@ -8,6 +8,7 @@ import ru.cyber_eagle_owl.core_impl.clean.domain.interactors.*
 
 @Module
 interface UseCasesBindingModule {
+    /*
     @Binds
     @Reusable
     fun provideLogInInputPort(logInInteractor: LogInInteractor): LogInInputPort
@@ -27,4 +28,5 @@ interface UseCasesBindingModule {
     @Binds
     @Reusable
     fun provideCheckIsLoggedInInputPort(checkIsLoggedInInteractor: CheckIsLoggedInInteractor): CheckIsLoggedInInputPort
+*/
 }
