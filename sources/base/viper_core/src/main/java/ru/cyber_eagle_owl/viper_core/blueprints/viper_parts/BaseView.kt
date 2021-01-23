@@ -1,18 +1,18 @@
 package ru.cyber_eagle_owl.viper_core.blueprints.viper_parts
 
-import android.view.View
+import androidx.viewbinding.ViewBinding
 import ru.cyber_eagle_owl.viper_core.blueprints.viper_parts.contracts.ViperPresenter
 import ru.cyber_eagle_owl.viper_core.blueprints.viper_parts.contracts.ViperView
 import javax.inject.Inject
 
-abstract class BaseView<P : ViperPresenter> : ViperView<P> {
+abstract class BaseView<P : ViperPresenter, VB : ViewBinding> : ViperView<P, VB> {
 
     @Inject
     override lateinit var presenter: P
 
-    override lateinit var viperRootView: View
+    override lateinit var viewBinding: VB
 
-    override fun setRootView(rootView: View) {
-        viperRootView = rootView
+    override fun setVBinding(viewBinding: VB) {
+        this.viewBinding = viewBinding
     }
 }

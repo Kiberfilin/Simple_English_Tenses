@@ -1,1 +1,7 @@
-<resources></resources>
+<resources>
+
+    <string name="homeMenuTitle">Home</string>
+    <string name="exercisesMenuTitle">Exercises</string>
+    <string name="tensesTableMenuTitle">Tenses Table</string>
+    <string name="double_back_notify">To exit, please click the Back button again</string>
+</resources>

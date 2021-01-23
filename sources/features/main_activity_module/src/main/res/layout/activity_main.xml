@@ -4,6 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/primaryLightColor"
     tools:context=".MainActivity">
 
+    <FrameLayout
+        android:id="@+id/mainFragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/main_fragment_container_margin"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.ismaeldivita.chipnavigation.ChipNavigationBar
+        android:id="@+id/bottomNavigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_navigation_background_rounded_corners"
+        android:elevation="2dp"
+        android:paddingTop="@dimen/bottom_navigation_padding_top"
+        android:paddingBottom="@dimen/bottom_navigation_padding_bottom"
+        app:cnb_addBottomInset="true"
+        app:cnb_addLeftInset="true"
+        app:cnb_addRightInset="true"
+        app:cnb_addTopInset="false"
+        app:cnb_menuResource="@menu/bottom_navigation_main_menu"
+        app:cnb_unselectedColor="@color/primaryTextColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

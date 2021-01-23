@@ -1,28 +1,29 @@
 package ru.cybereagleowl.sources.features.main_activity_module
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.MenuItem
 import ru.cyber_eagle_owl.core_api.providers.AppWithFacade
 import ru.cyber_eagle_owl.viper_core.blueprints.BaseActivity
+import ru.cybereagleowl.sources.features.main_activity_module.databinding.ActivityMainBinding
 import ru.cybereagleowl.sources.features.main_activity_module.di.MainActivityComponent
 import ru.cybereagleowl.sources.features.main_activity_module.viper.MainActivityViperContract.*
 import timber.log.Timber
 import javax.inject.Inject
 
 class MainActivity : BaseActivity() {
+    private lateinit var binding: ActivityMainBinding
     private var component: MainActivityComponent? = null
+
     @Inject
     lateinit var mainActivityView: MainActivityView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Timber.d("onCreate")
+        binding = ActivityMainBinding.inflate(layoutInflater)
         prepareDagger()
-        rootView = LayoutInflater.from(this).inflate(R.layout.activity_main, null)
-        setContentView(rootView)
+        setContentView(binding.root)
         mainActivityView.apply {
-            setRootView(rootView)
-            onFinishInflate(getRouterToolbox(), this@MainActivity)
+            setVBinding(binding)
+            onFinishInflate(getRouterToolbox(), savedInstanceState == null)
         }
     }
 
@@ -32,7 +33,12 @@ class MainActivity : BaseActivity() {
         component!!.inject(this)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return super.onOptionsItemSelected(item) //TODO
+    override fun onBackPressed() {
+        mainActivityView.onBackPressed { super.onBackPressed() }
+    }
+
+    override fun onStop() {
+        mainActivityView.onStop()
+        super.onStop()
     }
 }

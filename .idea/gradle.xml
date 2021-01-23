@@ -21,6 +21,7 @@
             <option value="$PROJECT_DIR$/sources/commons" />
             <option value="$PROJECT_DIR$/sources/commons/ui_core" />
             <option value="$PROJECT_DIR$/sources/features" />
+            <option value="$PROJECT_DIR$/sources/features/home" />
             <option value="$PROJECT_DIR$/sources/features/main_activity_module" />
           </set>
         </option>

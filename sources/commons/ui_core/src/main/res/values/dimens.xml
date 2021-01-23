@@ -1,4 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--Main Activity module start-->
+    <dimen name="bottom_navigation_padding_top">8dp</dimen>
+    <dimen name="bottom_navigation_padding_bottom">8dp</dimen>
+    <dimen name="bottom_navigation_corners_radius">40dp</dimen>
+    <dimen name="main_fragment_container_margin">8dp</dimen>
+    <!--Main Activity module end-->
 
+    <!--Home module start-->
+    <dimen name="greetings_text_view_padding">24dp</dimen>
+    <dimen name="praise_and_advice_text_view_padding">24dp</dimen>
+    <dimen name="greetings_text_view_text_size">18sp</dimen>
+    <dimen name="home_fragment_root_layout_backround_corners_radius">18dp</dimen>
+    <!--Home module end-->
+
+    <!--Exercises module start-->
+    <!--TODO-->
+    <!--Exercises module end-->
+
+    <!--Tenses Table module start-->
+    <!--TODO-->
+    <!--Tenses Table module end-->
 </resources>

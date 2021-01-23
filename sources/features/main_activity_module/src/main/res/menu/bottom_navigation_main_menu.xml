@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/home_bottom_navigation_item"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="@string/homeMenuTitle" />
+
+    <item
+        android:id="@+id/exercises_bottom_navigation_item"
+        android:icon="@drawable/ic_baseline_exercises_24"
+        android:title="@string/exercisesMenuTitle" />
+
+    <item
+        android:id="@+id/tenses_table_bottom_navigation_item"
+        android:icon="@drawable/ic_baseline_tenses_table_24"
+        android:title="@string/tensesTableMenuTitle" />
+
+</menu>

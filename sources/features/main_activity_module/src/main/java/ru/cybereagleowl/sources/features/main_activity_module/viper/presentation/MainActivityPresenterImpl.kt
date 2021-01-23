@@ -18,5 +18,18 @@ class MainActivityPresenterImpl @Inject constructor(private var router: MainActi
 
     override fun onViewCreated(view: MainActivityView) {
         this.view = view
+        router.openHome()
+    }
+
+    override fun onOptionHomeWasChosen() {
+        router.openHome()
+    }
+
+    override fun onOptionExercisesWasChosen() {
+        router.openExercises()
+    }
+
+    override fun onOptionTensesTableWasChosen() {
+        router.openTensesTable()
     }
 }

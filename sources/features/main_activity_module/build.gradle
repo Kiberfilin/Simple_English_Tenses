@@ -18,6 +18,10 @@ android {
         consumerProguardFiles "consumer-rules.pro"
     }
 
+    buildFeatures {
+        viewBinding true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -49,6 +53,7 @@ dependencies {
     implementation rxjava
     implementation rxandroid
     implementation rxkotlin
+    implementation chipBottomNavigation
 
     api project(':sources:base:core')
     implementation project(':sources:commons:ui_core')

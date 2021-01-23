@@ -49,4 +49,5 @@ dependencies {
     implementation project(':sources:commons:ui_core')
     implementation project(':sources:base:core')
     implementation project(':sources:features:main_activity_module')
+    implementation project(':sources:features:home')
 }

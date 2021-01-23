@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base application theme. -->
-    <style name="BaseActivityTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="BaseTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:statusBarColor">@color/colorTransparent</item>
-        <item name="android:navigationBarColor">@color/colorAlmostTransparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name ="colorPrimaryVariant">@color/primaryLightColor</item>
+        <item name ="colorOnPrimary">@color/primaryTextColor</item>
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryDarkColor</item>
+        <item name="colorOnSecondary">@color/secondaryTextColor</item>
+        <item name="colorSurface">@color/secondaryLightColor</item>
+        <item name="buttonStyle">@style/AppButton</item>
+
+        <item name="materialButtonStyle">@style/AppButton</item>
+    </style>
+
+    <style name="AppButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@color/secondaryColor</item>
     </style>
 
     <style name="Toolbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
-        <item name="android:textColorPrimary">@color/colorMainText</item>
+        <!--<item name="android:textColorPrimary">@color/colorMainText</item>
         <item name="android:textColorSecondary">@color/colorMainText</item>
-        <item name="colorPrimary">@color/colorShadeForFrontEndElements</item>
+        <item name="colorPrimary">@color/colorShadeForFrontEndElements</item>-->
     </style>
-
-    <style name="MainActivityTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="MainActivityTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
