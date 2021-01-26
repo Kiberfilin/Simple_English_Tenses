@@ -4,4 +4,8 @@ import androidx.fragment.app.FragmentManager
 
 interface HomeMediator {
     fun openHome(fragmentManager: FragmentManager, containerId: Int)
+
+    companion object {
+        const val HOME_FRAGMENT_TAG = "HOME_FRAGMENT_TAG"
+    }
 }
