@@ -3,13 +3,11 @@ package ru.cyber_eagle_owl.exercises.di
 import dagger.Binds
 import dagger.Module
 import ru.cyber_eagle_owl.core_api.di.FragmentScope
-import ru.cyber_eagle_owl.Exercises.viper.ExercisesViperContract.*
-import ru.cyber_eagle_owl.Exercises.viper.presentation.ExercisesPresenterImpl
-import ru.cyber_eagle_owl.Exercises.viper.presentation.ExercisesViewImpl
-import ru.cyber_eagle_owl.Exercises.viper.presentation.ExercisesRouterImpl
+import ru.cyber_eagle_owl.exercises.viper.ExercisesViperContract.*
+import ru.cyber_eagle_owl.exercises.viper.presentation.*
 
 @Module
-abstract class ExercisesMolule {
+abstract class ExercisesModule {
     @Binds
     @FragmentScope
     abstract fun ExercisesView(ExercisesViewImpl: ExercisesViewImpl): ExercisesView

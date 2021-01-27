@@ -6,7 +6,7 @@ import ru.cyber_eagle_owl.exercises.ExercisesFragment
 
 @FragmentScope
 @Component(
-    modules = [ExercisesMolule::class],
+    modules = [ExercisesModule::class],
     dependencies = [ProvidersFacade::class]
 )
 interface ExercisesComponent {

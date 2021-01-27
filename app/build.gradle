@@ -50,4 +50,5 @@ dependencies {
     implementation project(':sources:base:core')
     implementation project(':sources:features:main_activity_module')
     implementation project(':sources:features:home')
+    implementation project(':sources:features:exercises')
 }
