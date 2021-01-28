@@ -1,23 +1,23 @@
-package ru.cyber_eagle_owl.exercises
+package ru.cyber_eagle_owl.tenses_table
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import ru.cyber_eagle_owl.core_api.providers.AppWithFacade
-import ru.cyber_eagle_owl.exercises.databinding.FragmentExercisesBinding
-import ru.cyber_eagle_owl.exercises.di.ExercisesComponent
-import ru.cyber_eagle_owl.exercises.viper.ExercisesViperContract
+import ru.cyber_eagle_owl.tenses_table.databinding.FragmentTensesTableBinding
+import ru.cyber_eagle_owl.tenses_table.di.TensesTableComponent
+import ru.cyber_eagle_owl.tenses_table.viper.TensesTableViperContract.TensesTableView
 import ru.cyber_eagle_owl.viper_core.blueprints.BaseFragment
 import timber.log.Timber
 import javax.inject.Inject
 
-class ExercisesFragment : BaseFragment<FragmentExercisesBinding>() {
+class TensesTableFragment : BaseFragment<FragmentTensesTableBinding>() {
 
-    private var component: ExercisesComponent? = null
+    private var component: TensesTableComponent? = null
 
     @Inject
-    lateinit var exercisesView: ExercisesViperContract.ExercisesView
+    lateinit var tensesTableView: TensesTableView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,8 +25,8 @@ class ExercisesFragment : BaseFragment<FragmentExercisesBinding>() {
     ): View {
         Timber.d("onCreateView")
         prepareDagger()
-        initViewBinding(FragmentExercisesBinding.inflate(inflater, container, false))
-        exercisesView.apply {
+        initViewBinding(FragmentTensesTableBinding.inflate(inflater, container, false))
+        tensesTableView.apply {
             setVBinding(binding)
             onFinishInflate(getRouterToolbox())
         }
@@ -35,14 +35,14 @@ class ExercisesFragment : BaseFragment<FragmentExercisesBinding>() {
 
     private fun prepareDagger() {
         Timber.d("prepareDagger()")
-        component = ExercisesComponent.create((activity?.application as AppWithFacade).getFacade())
+        component = TensesTableComponent.create((activity?.application as AppWithFacade).getFacade())
         component!!.inject(this)
     }
 
     companion object {
-        fun newInstance(): ExercisesFragment {
+        fun newInstance(): TensesTableFragment {
             Timber.d("newInstance()")
-            return ExercisesFragment()
+            return TensesTableFragment()
         }
     }
 }

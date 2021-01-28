@@ -16,9 +16,9 @@ class MainActivityPresenterImpl @Inject constructor(private var router: MainActi
         router.setToolsForRouting(toolbox)
     }
 
-    override fun onViewCreated(view: MainActivityView) {
+    override fun onViewCreated(view: MainActivityView, isActivityCreatedAtTheFirstTime: Boolean) {
         this.view = view
-        router.openHome()
+        if (isActivityCreatedAtTheFirstTime) router.openHome()
     }
 
     override fun onOptionHomeWasChosen() {

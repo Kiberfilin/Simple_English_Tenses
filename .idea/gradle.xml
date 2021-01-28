@@ -24,6 +24,7 @@
             <option value="$PROJECT_DIR$/sources/features/exercises" />
             <option value="$PROJECT_DIR$/sources/features/home" />
             <option value="$PROJECT_DIR$/sources/features/main_activity_module" />
+            <option value="$PROJECT_DIR$/sources/features/tenses_table" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

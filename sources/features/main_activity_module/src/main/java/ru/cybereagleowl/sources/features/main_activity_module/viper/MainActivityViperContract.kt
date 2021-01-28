@@ -16,7 +16,7 @@ interface MainActivityViperContract {
     interface MainActivityPresenter : ViperPresenter {
         var view: MainActivityView
         fun onFinishInflate(toolbox: RouterToolbox)
-        fun onViewCreated(view: MainActivityView)
+        fun onViewCreated(view: MainActivityView, isActivityCreatedAtTheFirstTime: Boolean)
         fun onOptionHomeWasChosen()
         fun onOptionExercisesWasChosen()
         fun onOptionTensesTableWasChosen()

@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
@@ -9,13 +9,17 @@ android {
     buildToolsVersion "$sdkVersions.buildTools"
 
     defaultConfig {
-        applicationId "ru.cyber_eagle_owl.simpleenglish"
         minSdkVersion "$sdkVersions.minSdk"
         targetSdkVersion "$sdkVersions.targetSdk"
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildFeatures {
+        viewBinding true
     }
 
     buildTypes {
@@ -37,19 +41,20 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation appcompat
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     androidTestImplementation androidxJunit
     androidTestImplementation androidxEspressoCore
     testImplementation junit
-    implementation constraintlayout
     implementation ktxcore
     implementation dagger
     kapt daggerCompiler
     implementation timber
+    implementation material
+    implementation constraintlayout
+    implementation rxjava
+    implementation rxandroid
+    implementation rxkotlin
 
+    api project(':sources:base:core')
     implementation project(':sources:commons:ui_core')
-    implementation project(':sources:base:core')
-    implementation project(':sources:features:main_activity_module')
-    implementation project(':sources:features:home')
-    implementation project(':sources:features:exercises')
-    implementation project(':sources:features:tenses_table')
 }

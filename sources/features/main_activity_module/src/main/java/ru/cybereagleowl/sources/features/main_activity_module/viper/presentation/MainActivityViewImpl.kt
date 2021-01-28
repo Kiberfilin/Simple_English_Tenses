@@ -2,7 +2,6 @@ package ru.cybereagleowl.sources.features.main_activity_module.viper.presentatio
 
 import android.content.Context
 import android.widget.Toast
-import ru.cyber_eagle_owl.viper_core.blueprints.BaseActivity
 import ru.cybereagleowl.sources.features.main_activity_module.viper.MainActivityViperContract.*
 import ru.cyber_eagle_owl.viper_core.blueprints.viper_parts.BaseView
 import ru.cyber_eagle_owl.viper_core.wrappers.RouterToolbox
@@ -27,7 +26,7 @@ class MainActivityViewImpl @Inject constructor() :
         insetsHandling()
         presenter.apply {
             onFinishInflate(toolbox)
-            onViewCreated(this@MainActivityViewImpl)
+            onViewCreated(this@MainActivityViewImpl, isActivityCreatedAtTheFirstTime)
         }
     }
 

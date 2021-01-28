@@ -4,12 +4,10 @@ import dagger.Binds
 import dagger.Module
 import ru.cyber_eagle_owl.core_api.di.FragmentScope
 import ru.cyber_eagle_owl.home.viper.HomeViperContract.*
-import ru.cyber_eagle_owl.home.viper.presentation.HomePresenterImpl
-import ru.cyber_eagle_owl.home.viper.presentation.HomeViewImpl
-import ru.cyber_eagle_owl.home.viper.presentation.HomeRouterImpl
+import ru.cyber_eagle_owl.home.viper.presentation.*
 
 @Module
-abstract class HomeMolule {
+abstract class HomeModule {
     @Binds
     @FragmentScope
     abstract fun homeView(homeViewImpl: HomeViewImpl): HomeView

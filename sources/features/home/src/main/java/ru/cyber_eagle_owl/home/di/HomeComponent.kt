@@ -7,7 +7,7 @@ import ru.cyber_eagle_owl.home.HomeFragment
 
 @FragmentScope
 @Component(
-    modules = [HomeMolule::class],
+    modules = [HomeModule::class],
     dependencies = [ProvidersFacade::class]
 )
 interface HomeComponent {

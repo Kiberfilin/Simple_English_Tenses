@@ -1,4 +1,5 @@
 package ru.cyber_eagle_owl.exercises.di
+
 import dagger.Component
 import ru.cyber_eagle_owl.core_api.di.FragmentScope
 import ru.cyber_eagle_owl.core_api.providers.ProvidersFacade
